@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 body {
@@ -22,13 +23,7 @@ body {
   overflow: auto;
   flex-direction: row;
 }
-/* .flex-container div {
-  width: 365px;
-  height: 439px;
-  margin: 25px;
-   background-color: rgba(15, 15, 15, 0.692); 
-} 
-*/
+
 .flex-container div {
   height: 100vh;
   flex-wrap: nowrap;
@@ -38,6 +33,10 @@ body {
   flex-wrap: nowrap;
   flex: 2;
   background-color: black;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
 }
 .right-side {
   flex: 4;
@@ -50,13 +49,13 @@ body {
   height: 100%;
 } */
 .left-side img {
-  max-width: 50%;
-  max-height: 50%;
+  width: 60%;
+  height: 50%;
   margin: auto;
 }
 .rightside-parent {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   align-content: center;
   flex-direction: column;
@@ -74,5 +73,50 @@ body {
   transform: translateY(-3px);
   transform: scale(1.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.87);
+  cursor: pointer;
   /* border: 3px red; */
+}
+
+.left-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.left-child label {
+  margin: 5px;
+}
+.left-child input {
+  margin: 10px;
+  width: 300px;
+  height: 30px;
+  background-color: rgb(0, 0, 0);
+  border: 0.5px solid rgb(255, 255, 255);
+}
+
+.left-child button {
+  margin: 10px;
+  width: 300px;
+  height: 30px;
+  background-color: rgb(255, 94, 0);
+  border: 0px;
+}
+
+.left-child button:hover {
+  transform: translateY(-3px);
+  transform: scale(1.05);
+  /* box-shadow: 3px 3px rgba(255, 255, 255, 0.425); */
+  cursor: pointer;
+}
+.create-account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.line {
+  display: inline;
+  width: 11vw;
 }
